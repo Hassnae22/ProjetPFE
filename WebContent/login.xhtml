@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>login</title>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+         <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+         <link rel="stylesheet" href="../css/slogin.css"/>
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"></link>
+    </h:head>
+    <h:body style="background-color:#f2f7f6;">
+    
+    <div class="container-fluid">
+      
+    <h:form style="margin-left: 560px; margin-right: 560px;margin-top: 80px; background-color:white; border: 2px solid #ebebeb;  border-radius: 12px;">
+      <h4 id="txt">LO<span style="color:#4ECDC4">GIN</span></h4>
+	   
+	  <div class="input_container"> 
+	    <div class="form-group">      
+		 <h:inputText id="username"  value="#{user.username}"  class="form-control" ><i class="fas fa-user"></i></h:inputText>
+        </div>
+		<div class="input_container">
+		
+		<h:inputSecret id="password" class="form-control" value="#{user.pwd}" >
+	    </h:inputSecret>
+		
+		
+		
+	   </div>
+	   
+		<h:commandButton action="#{user.VerifAuth()}" value="Login" class="btn-A"></h:commandButton>
+		</div>
+	</h:form>
+	</div>
+	
+	
+	
+	
+	
+
+
+<script src="js/bootstrap.min.js"></script>	
+ </h:body>
+</html>

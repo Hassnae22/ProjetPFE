@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+ <title>details User</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
+        <link rel="stylesheet" href="../css/style1.css"/>
+</h:head> 
+<body> 
+   <nav class="navbar navbar-expand-lg navbar-fluid" style="background-color:#4ECDC4;">
+        
+         <img src="../images/icons8-gestion-de-projet-50.png"
+	          class="img-circle" width="70" height="50" />
+	     <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+            <a class="nav-link" href="exp1.xhtml#">Accuiel<span class="sr-only">(current)</span></a>
+           </li>
+          <li class="nav-item">
+           <a class="nav-link" href="exp2.xhtml#">Projets</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="exp3.xhtml#">Utilisateur</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="exp4.xhtml#">Stocke</a>
+         </li>
+        </ul>
+      
+      <ul class="nav pull-right top-menu">
+			<li><a class="logout" href="login.xhtml#"><h:commandButton action="login" value="Deconnexion" class="btn btn-outline-dark"/>
+    </a></li>
+		</ul>
+     </div>
+  </nav>
+     
+     
+     
+    <nav class="navbar navbar-expand-lg navbar-fluid" style="background-color: #2f3b3a; margin-top: 30px; height: 50px;margin-left: 450px; margin-right: 450px;">
+         <div class="col-lg-6">
+          <h4 class="tx" style="color:#e4edec;"> > listes  des  Projet</h4>
+       </div>
+       <div class="col-lg-6">
+        <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Nom de projet" aria-label="Search"/>
+        <button class="btn my-2 my-sm-0" type="submit" style="background-color: #4ECDC4;">Search</button>
+       </form>
+       </div>
+      </nav>
+  
+  <div class="container-fluid items">
+   <div class="row">
+     <div class="table-responsive">
+     <h:form style="margin-left: 410px; margin-right: 410px;">
+   <h:dataTable value="#{user.getAllUsers()}" var="users" class="table table-bordered table-condensed table-body-center">
+   
+   
+    <h:column class="thd">
+    <f:facet name="header">Projet</f:facet>
+     
+  </h:column>
+   <h:column class="thd">
+    <f:facet name="header">Etat</f:facet>
+    
+  </h:column>
+    </h:dataTable>
+</h:form>
+</div>
+</div>
+</div>
+  <script src="../js/bootstrap.min.js"></script> 
+  <script src="../jquery/jquery.min.js"></script>
+  
+  
+  
+  
+  
+</body> 
+</html>
